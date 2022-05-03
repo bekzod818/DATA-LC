@@ -34,7 +34,7 @@ class Subject(models.Model):
 class FAQ(models.Model):
     question = models.CharField(max_length=200, verbose_name="Savol")
     course = models.ForeignKey('Course', on_delete=models.CASCADE, verbose_name="Mavzular", related_name="savollar", null=True)
-    answer = models.CharField(max_length=200, verbose_name="Javob")
+    answer = models.TextField(max_length=4000, verbose_name="Javob")
 
     class Meta:
         verbose_name = "Savol - javob "
